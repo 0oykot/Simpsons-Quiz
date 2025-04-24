@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=width-device-width, initial-scale=1.0">
+    <title>Your Result</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <nav>
+        <a class="button" href="Start_quiz.html">Home</a>
+        <a class="buttonresult" href="Quiz.html">Back to the Quiz</a>
+        <a class="button" href="info_Quiz.html">About us</a>
+    </nav>
+    <h1>Your result</h1>
+    <div id="result"></div> <!--Här visas resultaten-->
+
+    <script>
+      // Hämta resultatet från localStorage
+      const personality=localStorage.getItem('personality');
+
+      //Visa resultatet beroende på vad det är
+      let message='';
+      switch (personality) {
+        case "Homer":
+          message="You are alike Homer Simpson! You love to take it chill and eat";
+          break;
+        case "Marge":
+          message="You are alike Marge Simpson! You are a caring person and responsible";
+          break;
+        case "Bart":
+          message="you are alike Bart Simpson! You are really silly person that likes chaos";
+          break;
+        case "Lisa":
+          message="You are alike Lisa Simpson! You are smart, creative and naive";
+          break;
+        default:
+          message= "Something went wrong, please try again.";
+      }
+
+      // Skriv ut resultatet på sidan
+      document.getElementById('result').innerText=message;
+
+      //Rensa resultatet från localStorage efter att det har visats
+      localStorage.removeItem('personality');
+    </script>
+
+    <img src="Bilder/Congrats.png" Class="img4 border" >
+    <img src="Bilder/Marge-simpsons2.jpg" class="img5 ">
+    <img src="Bilder/Bart-simpsons2.jpg" class="img6">
+    <img src="Bilder/Lisa-simpsons2.jpg" class="img7">
+    <img src="Bilder/Homer-simpsons2.jpg" class="img8">
+    <img src="Bilder/Maggie_simpsons2.jpg" class="img9">
+
+  </body>
+</html>

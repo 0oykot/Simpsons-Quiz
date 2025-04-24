@@ -1,0 +1,435 @@
+
+/*body är den grundläggde sidstil*/
+body { 
+  font-family: Arial, sans-serif; /*Använder typsnittet Arial eller sans-serif om Arial inte finns*/
+  background-color: yellow; /*Sidans bakgrunds färg blir gul*/
+  text-align: center; /*All text centreras*/
+  padding: 0px; /*20px padding runtom hela innehållet*/
+}
+
+/*Startknapp*/
+.Startbutton {
+  align-self: flex-start; /**/
+  justify-content: space-around; /**/
+  position: absolute; /**/
+  left: 31rem; /*Den placeras ca 31rem från vänster*/
+  top: 22rem; /*Och 22rem från toppen*/
+  width: 13rem; /*Har en storlek på 13 rem bred*/
+  height: 2.5rem; /*Och 2.5 rem hög*/
+  font-size: 2rem; /*Stort typsnitt*/
+  box-shadow: 8px 8px black; /*Skugga på 8px åt höger och neråt i svart*/
+}
+
+/*Animation växer vid hover*/
+@keyframes grow{
+  from{
+    transform: scale(1);
+  }                       /*En animation som förstorar ett element till 120% när det aktiveras*/
+  to{
+    transform: scale(1.2);
+  }
+}
+
+/*Hover effekter*/
+.button:hover{
+  background-color: rgb(92, 119, 226); /*Bakgrunden blir blåaktiga*/
+  animation: grow 0.5s forwards; /*Animationen grow körs på 0.5 sekunder*/
+  box-shadow: none; /*Skuggan försvinner*/
+}
+
+
+/*Länkar a*/
+a {
+  display: flex; 
+  justify-content: center;
+  gap: 2em;
+  background-color: rgb(237, 202, 114);
+  border-width: 0.03em;
+  border-style: outset;
+  border-color: rgb(30, 14, 5);
+  color:black;
+  width: 5em;
+  background: pink;
+  display: flex;
+  border-radius: 1em;
+  border-style: groove;
+  text-decoration: none;
+}
+
+img {
+  width: 20em;
+  height: 15em;
+  margin: 2em;
+}
+
+.img1 {
+  position: absolute;
+  top: 12rem;
+  left: 50rem;
+  width: 18rem;
+  height: 31rem;
+}
+
+.img2 {
+  position: absolute;
+  top: 12rem;
+  left: 3rem;
+  width: 18rem;
+  height: 31rem;
+}
+
+.img3 {
+  position: absolute;
+  top: 25rem;
+  left: 26rem;
+  height: 20rem;
+}
+
+.img4 {
+  position: absolute;
+  top: 11rem;
+  left: 23rem;
+  width: 27rem;
+}
+
+.img5 {
+  position: absolute;
+  top: 23rem;
+  left: 60rem;
+  height: 10rem;
+  width: 10rem;
+  box-shadow: 8px 8px black;
+  border-radius: 0.5em;
+
+}
+
+.img6 {
+  position: absolute;
+  left: 60rem;
+  height: 10rem;
+  width: 10rem;
+  box-shadow: 8px 8px black;
+  border-radius: 0.5em;
+}
+
+.img7 {
+  position: absolute;
+  right: 60rem;
+  height: 10rem;
+  width: 10rem;
+  box-shadow: 8px 8px black;
+  border-radius: 0.5em;
+}
+
+.img8 {
+  position: absolute;
+  top: 23rem;
+  right: 60rem;
+  height: 10rem;
+  width: 10rem;
+  box-shadow: 8px 8px black;
+  border-radius: 0.5em;
+}
+
+.img9 {
+  position: absolute;
+  top: 27.5rem;
+  left: 32rem;
+  height: 7rem;
+  width: 10rem;
+  box-shadow: 8px 8px black;
+  border-radius: 0.5em;
+}
+
+.copy {
+  position: absolute;
+  left: 33rem;
+  top: 50rem;
+}
+
+
+.question {
+  margin: 20px 0;
+}
+
+.question label {
+  display: block;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.answer {
+  margin: 20px 0;
+}
+
+.answer input {
+  margin-right: 10px;
+}
+
+#result {
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.border{
+  border: 1px black solid;
+  border-radius: 5px;
+  box-shadow: 10px 10px black;
+}
+
+nav{
+  display: flex;
+  gap: 1rem;
+}
+
+nav.l {
+  justify-content: center;
+}
+
+.resultbutton {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(237, 202, 114);
+  border-width: 0.03em;
+  border-style: outset;
+  border-color: rgb(30, 14, 5);
+  color:black;
+  background: pink;
+  display: flex;
+  border-radius: 1em;
+  border-style: groove;
+  cursor: pointer;
+  width: 9rem;
+  height: 1.5rem;
+  left: 20em;
+  font-size: large;
+}
+
+.resultbutton:hover {
+  background-color: rgb(92, 119, 226);
+  animation: grow 0.5s forwards;
+}
+
+
+.buttonresult {
+  width: 9rem;
+}
+
+.buttonresult:hover {
+  background-color: rgb(92, 119, 226);
+  animation: grow 0.5s forwards;
+}
+
+.buttoninfo {
+  width: 9.5rem;
+  justify-content: center;
+  display: flex;
+  align-self: center;
+}
+
+.buttoninfo:hover {
+  background-color: rgb(92, 119, 226);
+  animation: grow 0.5s forwards;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 100vw;
+}
+
+fieldset {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+fieldset>div{
+  display: flex;
+  margin-left: 40%;
+  gap: 1.5rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  right: 50%;
+  text-align: left;
+}
+
+
+input#Homer {
+  display: flex;
+  flex-direction: column;
+}
+
+input#Marge {
+  display: flex;
+  flex-direction: column;
+}
+
+input#Bart {
+  display: flex;
+  flex-direction: column;
+}
+
+input#Lisa {
+  display: flex;
+  flex-direction: column;
+  top: 2rem;
+}
+
+input#Maggie {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1207px) {
+  .img1 {
+    position: absolute;
+    top: 14rem;
+    left: 50rem;
+    width: 16rem;
+    height: 31rem;
+  }
+  .img2 {
+    position: absolute;
+    top: 14rem;
+    left: 3rem;
+    width: 16rem;
+    height: 31rem;
+  }
+  .img3 {
+    position: absolute;
+    top: 27rem;
+    left: 26rem;
+    height: 20rem;
+  }
+  .img4 {
+    position: absolute;
+    top: 13rem;
+    left: 23rem;
+    width: 25rem;
+  }
+  .img5 {
+    position: absolute;
+    top: 23rem;
+    left: 58rem;
+    height: 10rem;
+    width: 10rem;
+    box-shadow: 8px 8px black;
+    border-radius: 0.5em;
+  
+  }
+  .img6 {
+    position: absolute;
+    left: 58rem;
+    height: 10rem;
+    width: 10rem;
+    box-shadow: 8px 8px black;
+    border-radius: 0.5em;
+  }
+  .img7 {
+    position: absolute;
+    right: 58rem;
+    height: 10rem;
+    width: 10rem;
+    box-shadow: 8px 8px black;
+    border-radius: 0.5em;
+  }
+  
+  .img8 {
+    position: absolute;
+    top: 23rem;
+    right: 58rem;
+    height: 10rem;
+    width: 10rem;
+    box-shadow: 8px 8px black;
+    border-radius: 0.5em;
+  }
+  
+  .img9 {
+    position: absolute;
+    top: 30rem;
+    left: 32rem;
+    height: 7rem;
+    width: 10rem;
+    box-shadow: 8px 8px black;
+    border-radius: 0.5em;
+  }
+}
+
+@media (max-width: 1144px) {
+  .img1 {
+    position: absolute;
+    top: 17rem;
+    left: 50rem;
+    width: 14rem;
+    height: 28rem;
+  }
+  .img2 {
+    position: absolute;
+    top: 17rem;
+    left: 3rem;
+    width: 14rem;
+    height: 28rem;
+  }
+  .img3 {
+    position: absolute;
+    top: 29rem;
+    left: 26rem;
+    height: 20rem;
+  }
+  .img4 {
+    position: absolute;
+    top: 13rem;
+    left: 23rem;
+    width: 25rem;
+  }
+  .img5 {
+    position: absolute;
+    top: 23rem;
+    left: 55rem;
+    height: 10rem;
+    width: 10rem;
+    box-shadow: 8px 8px black;
+    border-radius: 0.5em;
+  }
+  .img6 {
+    position: absolute;
+    left: 55rem;
+    height: 10rem;
+    width: 10rem;
+    box-shadow: 8px 8px black;
+    border-radius: 0.5em;
+  }
+  .img7 {
+    position: absolute;
+    right: 55rem;
+    height: 10rem;
+    width: 10rem;
+    box-shadow: 8px 8px black;
+    border-radius: 0.5em;
+  }
+  .img8 {
+    position: absolute;
+    top: 23rem;
+    right: 55rem;
+    height: 10rem;
+    width: 10rem;
+    box-shadow: 8px 8px black;
+    border-radius: 0.5em;
+  }
+  .img9 {
+    position: absolute;
+    top: 30rem;
+    left: 32rem;
+    height: 7rem;
+    width: 10rem;
+    box-shadow: 8px 8px black;
+    border-radius: 0.5em;
+  }
+}
